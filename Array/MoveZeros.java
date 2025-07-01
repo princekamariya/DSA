@@ -22,3 +22,23 @@ class Solution {
         }
     }
 }
+
+
+// Optimal
+class Solution {
+    public void moveZeroes(int[] nums) {
+        // using 2 pointer approach
+        int j = 0; // Initialize j to 0
+
+        for (int i = 0; i < nums.length; i++) {
+            if (nums[i] != 0) {
+                nums[j++] = nums[i];
+            }
+        }
+
+        // Fill the remaining elements with zeros
+        while (j < nums.length) {
+            nums[j++] = 0;
+        }
+    }
+}
